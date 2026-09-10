@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: white;
+}
+
+/* =====================
+   HEADER
+   ===================== */
+
+.header {
+  width: 100%;
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #7B3FF2;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #7B3FF2;
+}
+
+.whatsapp {
+  color: #25D366;
+  font-size: 25px;
+}
+
+
+/* =====================
+   ACCUEIL
+   ===================== */
+
+.hero {
+  min-height: 80vh;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("image/coiffure1.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.sur-titre {
+  color: #7B3FF2;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 8vw, 90px);
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+.hero-text > p:not(.sur-titre) {
+  color: #ddd;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 25px;
+  background: #7B3FF2;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+
+/* =====================
+   SERVICES
+   ===================== */
+
+.services {
+  padding: 80px 8%;
+}
+
+.services > h2,
+.galerie > h2,
+.apropos h2,
+.contact h2 {
+  text-align: center;
+  color: #7B3FF2;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service {
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 40px 25px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-8px);
+  border-color: #7B3FF2;
+}
+
+.service i {
+  color: #7B3FF2;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.service h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.service p {
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service strong {
+  color: #7B3FF2;
+  font-size: 20px;
+}
+
+
+/* =====================
+   GALERIE
+   ===================== */
+
+.galerie {
+  padding: 80px 8%;
+  background: #0a0a0a;
+}
+
+.galerie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.galerie-grid img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.galerie-grid img:hover {
+  transform: scale(1.03);
+}
+
+
+/* =====================
+   À PROPOS
+   ===================== */
+
+.apropos {
+  padding: 80px 15%;
+  text-align: center;
+}
+
+.apropos p {
+  max-width: 750px;
+  margin: auto;
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+
+/* =====================
+   CONTACT
+   ===================== */
+
+.contact {
+  padding: 80px 8%;
+  text-align: center;
+  background: #0a0a0a;
+}
+
+.contact p {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.whatsapp-btn {
+  background: #25D366;
+}
+
+
+/* =====================
+   FOOTER
+   ===================== */
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #888;
+  background: #000;
+}
+
+
+/* =====================
+   TABLETTE
+   ===================== */
+
+@media (max-width: 900px) {
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .galerie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =====================
+   PETIT ÉCRAN
+   ===================== */
+
+@media (max-width: 600px) {
+
+  .header {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 50px 25px;
+  }
+
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  .hero-text > p:not(.sur-titre) {
+    font-size: 16px;
+  }
+
+  .services {
+    padding: 60px 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galerie {
+    padding: 60px 20px;
+  }
+
+  .galerie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galerie-grid img {
+    height: 300px;
+  }
+
+  .apropos {
+    padding: 60px 25px;
+  }
+
+  .contact {
+    padding: 60px 25px;
+  }
+
+  .services > h2,
+  .galerie > h2,
+  .apropos h2,
+  .contact h2 {
+    font-size: 32px;
+  }
+
+}

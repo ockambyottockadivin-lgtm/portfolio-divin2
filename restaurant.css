@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+/* =====================
+   HEADER
+   ===================== */
+
+.header {
+  width: 100%;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #f5a623;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu a:hover {
+  color: #f5a623;
+}
+
+.plat img {
+  
+  width: 100%;
+  
+  height: 200px;
+  
+  object-fit: cover;
+  
+  border-radius: 15px;
+  
+  margin-bottom: 20px;
+  
+}
+.commande {
+
+  display: inline-block;
+  
+  margin-top: 20px;
+  
+  padding: 10px 20px;
+  
+  background: #f5a623;
+  
+  color: #111;
+  
+  text-decoration: none;
+  
+  border-radius: 25px;
+  
+  font-weight: bold;
+  
+}
+
+.infos {
+  
+  display: grid;
+  
+  grid-template-columns: repeat(2, 1fr);
+  
+  gap: 30px;
+  
+  padding: 70px 8%;
+  
+  background: #181818;
+  
+}
+
+.info {
+  
+  text-align: center;
+  
+  padding: 35px;
+  
+  background: #111;
+  
+  border-radius: 20px;
+  
+  border: 1px solid #333;
+  
+}
+
+.info i {
+  
+  font-size: 45px;
+  
+  color: #f5a623;
+  
+  margin-bottom: 20px;
+  
+}
+
+.info h2 {
+  
+  margin-bottom: 15px;
+  
+}
+
+.info p {
+  
+  color: #ccc;
+  
+  line-height: 1.7;
+  
+}
+
+/* =====================
+   ACCUEIL
+   ===================== */
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 8%;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.65)
+    ),
+    url("image/restaurant.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text > p:first-child {
+  color: #f5a623;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 8vw, 100px);
+  margin: 10px 0;
+}
+
+.hero h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  line-height: 1.7;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 25px;
+  background: #f5a623;
+  color: #111;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =====================
+   MENU
+   ===================== */
+
+.section-menu {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.section-menu > h2,
+.apropos h2,
+.contact h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #f5a623;
+}
+
+.plats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.plat {
+  background: #1b1b1b;
+  padding: 35px 25px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+
+.plat:hover {
+  transform: translateY(-8px);
+  border-color: #f5a623;
+}
+
+.plat i {
+  font-size: 55px;
+  color: #f5a623;
+  margin-bottom: 20px;
+}
+
+.plat h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.plat p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.plat strong {
+  color: #f5a623;
+  font-size: 20px;
+}
+
+
+/* =====================
+   À PROPOS
+   ===================== */
+
+.apropos {
+  padding: 80px 15%;
+  text-align: center;
+  background: #181818;
+}
+
+.apropos p {
+  max-width: 750px;
+  margin: auto;
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+
+/* =====================
+   CONTACT
+   ===================== */
+
+.contact {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.contact p {
+  color: #ccc;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.whatsapp {
+  display: inline-block;
+  padding: 15px 25px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.whatsapp i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+
+/* =====================
+   FOOTER
+   ===================== */
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #080808;
+  color: #888;
+}
+
+
+/* =====================
+   PETIT ÉCRAN
+   ===================== */
+
+@media (max-width: 700px) {
+
+  .header {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+.infos {
+  
+  grid-template-columns: 1fr;
+  
+  padding: 50px 25px;
+  
+}
+
+  .menu {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 50px 25px;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+  }
+
+  .hero h2 {
+    font-size: 23px;
+  }
+
+  .plats {
+    grid-template-columns: 1fr;
+  }
+
+  .section-menu,
+  .contact {
+    padding: 60px 25px;
+  }
+
+  .apropos {
+    padding: 60px 25px;
+  }
+
+  .section-menu > h2,
+  .apropos h2,
+  .contact h2 {
+    font-size: 32px;
+  }
+}
